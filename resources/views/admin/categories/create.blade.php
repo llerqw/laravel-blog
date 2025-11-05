@@ -25,12 +25,18 @@
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
                     <div class="col-10">
-                        Категории
-                    </div>
-                    <div class="col-2">
-                        <a href="{{route('admin.category.create')}}" class="btn btn-block btn-primary">Добавить категорию</a>
-                    </div>
+                        <h6 class="mb-2">Добавление категории</h6>
+                        <form action="#">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label>Название</label>
+                                    <input type="text" class="form-control" name="title" placeholder="Название категории">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Добавить</button>
+                            </div>
 
+                        </form>
+                    </div>
                 </div>
                 <!-- /.row -->
 
