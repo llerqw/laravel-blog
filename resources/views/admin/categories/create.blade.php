@@ -26,12 +26,18 @@
                 <div class="row">
                     <div class="col-10">
                         <h6 class="mb-2">Добавление категории</h6>
-                        <form action="#">
+                        <form action="{{route('admin.category.store')}}" method="post">
+                            @csrf
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Название</label>
-                                    <input type="text" class="form-control" name="title" placeholder="Название категории">
+                                    <input type="text" class="form-control" name="title"
+                                           placeholder="Название категории">
+                                    @error('title')
+                                    <p class="text-danger">Это поле необходимо заполнить!({{$message}})</p>
+                                    @enderror
                                 </div>
+
                                 <button type="submit" class="btn btn-primary">Добавить</button>
                             </div>
 
