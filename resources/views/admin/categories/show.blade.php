@@ -25,7 +25,7 @@
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
                     <div class="col-10">
-                        {{$category->title}}
+                        <h3>{{$category->title}} <a href="{{route('admin.category.edit', $category->id)}}" class="p-2 text-success"><i class="fas fa-pencil-alt"></i></a></h3>
                     </div>
 
                 </div>

@@ -26,8 +26,9 @@
                 <div class="row">
                     <div class="col-10">
                         <h6 class="mb-2">Редактирование категории "{{$category->title}}"</h6>
-                        <form action="#" method="post">
+                        <form action="{{route('admin.category.update', $category->id)}}" method="post">
                             @csrf
+                            @method('PATCH')
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Название</label>
