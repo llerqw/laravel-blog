@@ -28,9 +28,37 @@
                         Категории
                     </div>
                     <div class="col-2">
-                        <a href="{{route('admin.category.create')}}" class="btn btn-block btn-primary">Добавить категорию</a>
+                        <a href="{{route('admin.category.create')}}" class="btn btn-block btn-primary">Добавить
+                            категорию</a>
                     </div>
 
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body table-responsive p-0">
+                                <table class="table table-head-fixed text-nowrap">
+                                    <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Название</th>
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    @foreach($categories as $category)
+                                        <tr>
+                                            <td>{{$category->id}}</td>
+                                            <td>{{$category->title}}</td>
+                                        </tr>
+                                    @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
                 </div>
                 <!-- /.row -->
 
