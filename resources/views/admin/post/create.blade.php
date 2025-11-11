@@ -32,15 +32,21 @@
                                 <div class="form-group">
                                     <label>Название</label>
                                     <input type="text" class="form-control" name="title"
-                                           placeholder="Название поста">
+                                           placeholder="Название поста" value="{{ old('title') }}">
                                     @error('title')
                                     <p class="text-danger">Это поле необходимо заполнить!({{$message}})</p>
                                     @enderror
                                 </div>
-
-                                <button type="submit" class="btn btn-primary">Добавить</button>
+                                <div class="form-group">
+                                    <textarea class="summernote" name="content">{{old('content')}}</textarea>
+                                    @error('content')
+                                    <p class="text-danger">Это поле необходимо заполнить!({{$message}})</p>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary">Добавить</button>
+                                </div>
                             </div>
-
                         </form>
                     </div>
                 </div>
