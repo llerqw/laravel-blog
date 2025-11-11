@@ -26,10 +26,10 @@
                 <div class="row">
                     <div class="col-10">
                         <div class="row d-flex align-items-center p-2">
-                        <h3>{{$category->title}}</h3>
-                        <a href="{{route('admin.category.edit', $category->id)}}" class="p-2 text-success"><i
+                        <h3>{{$tag->title}}</h3>
+                        <a href="{{route('admin.tag.edit', $tag->id)}}" class="p-2 text-success"><i
                                 class="fas fa-pencil-alt"></i></a>
-                        <form action="{{route('admin.category.delete', $category->id)}}"
+                        <form action="{{route('admin.tag.delete', $tag->id)}}"
                               method="post">
                             @csrf
                             @method('DELETE')
@@ -52,11 +52,11 @@
                                     <tbody>
                                     <tr>
                                         <td>ID</td>
-                                        <td>{{$category->id}}</td>
+                                        <td>{{$tag->id}}</td>
                                     </tr>
                                     <tr>
                                         <td>Название</td>
-                                        <td>{{$category->title}}</td>
+                                        <td>{{$tag->title}}</td>
                                     </tr>
                                     </tbody>
                                 </table>
