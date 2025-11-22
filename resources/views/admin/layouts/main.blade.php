@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AdminLTE 3 | Dashboard</title>
+    <link rel="stylesheet" href="{{asset('plugins/select2/css/select2.min.css')}}">
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -84,6 +85,9 @@
 <!-- AdminLTE App -->
 <script src="{{asset('dist/js/adminlte.js')}}"></script>
 
+<script src="{{asset('plugins/select2/js/select2.full.min.js')}}"></script>
+
+
 <script>
     $(document).ready(function (){
         $('.summernote').summernote({
@@ -100,6 +104,7 @@
     $(function (){
         bsCustomFileInput.init();
     });
+    $('.select2').select2()
 </script>
 <style>
     .custom-file-input:lang(en)~.custom-file-label::after{

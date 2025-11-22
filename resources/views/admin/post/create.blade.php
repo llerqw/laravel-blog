@@ -86,6 +86,20 @@
                                     <p class="text-danger">Это поле необходимо заполнить!({{$message}})</p>
                                     @enderror
                                 </div>
+                                <div class="form-group">
+                                    <label>Теги</label>
+                                    <select class="select2" multiple="multiple" data-placeholder="Выберите теги"
+                                            style="width: 100%;" name="tag_ids[]">
+                                        @foreach($tags as $tag)
+                                            <option value="{{$tag->id}}"
+                                            {{is_array(old('tag_ids')) && in_array($tag->id, old('tag_ids')) ? ' selected' : ''}}
+                                            >{{$tag->title}}</option>
+                                        @endforeach
+                                    </select>
+                                    @error('tag_ids')
+                                    <p class="text-danger">Это поле необходимо заполнить!({{$message}})</p>
+                                    @enderror
+                                </div>
 
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary">Добавить</button>
