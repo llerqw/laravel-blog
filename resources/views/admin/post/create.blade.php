@@ -34,13 +34,13 @@
                                     <input type="text" class="form-control" name="title"
                                            placeholder="Название поста" value="{{ old('title') }}">
                                     @error('title')
-                                    <p class="text-danger">Это поле необходимо заполнить!({{$message}})</p>
+                                    <p class="text-danger">({{$message}})</p>
                                     @enderror
                                 </div>
                                 <div class="form-group">
                                     <textarea class="summernote" name="content">{{old('content')}}</textarea>
                                     @error('content')
-                                    <p class="text-danger">Это поле необходимо заполнить!({{$message}})</p>
+                                    <p class="text-danger">({{$message}})</p>
                                     @enderror
                                 </div>
                                 <div class="form-group">
@@ -55,7 +55,7 @@
                                         </div>
                                     </div>
                                     @error('preview_image')
-                                    <p class="text-danger">Это поле необходимо заполнить!({{$message}})</p>
+                                    <p class="text-danger">({{$message}})</p>
                                     @enderror
                                 </div>
                                 <div class="form-group">
@@ -70,7 +70,7 @@
                                         </div>
                                     </div>
                                     @error('main_image')
-                                    <p class="text-danger">Это поле необходимо заполнить!({{$message}})</p>
+                                    <p class="text-danger">({{$message}})</p>
                                     @enderror
                                 </div>
                                 <div class="form-group">
@@ -83,7 +83,7 @@
                                         @endforeach
                                     </select>
                                     @error('category_id')
-                                    <p class="text-danger">Это поле необходимо заполнить!({{$message}})</p>
+                                    <p class="text-danger">({{$message}})</p>
                                     @enderror
                                 </div>
                                 <div class="form-group">
@@ -97,7 +97,7 @@
                                         @endforeach
                                     </select>
                                     @error('tag_ids')
-                                    <p class="text-danger">Это поле необходимо заполнить!({{$message}})</p>
+                                    <p class="text-danger">({{$message}})</p>
                                     @enderror
                                 </div>
 
