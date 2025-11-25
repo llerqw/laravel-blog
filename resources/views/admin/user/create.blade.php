@@ -53,6 +53,19 @@
                                     <p class="text-danger">{{$message}}</p>
                                     @enderror
                                 </div>
+                                <div class="form-group">
+                                    <label for="exampleInputFile">Добавить роль</label>
+                                    <select name="role" class="form-control">
+                                        @foreach($roles as $id => $role)
+                                            <option value="{{$id}}"
+                                                {{$id == old('role') ? ' selected' : ''}}>
+                                                {{$role}}</option>
+                                        @endforeach
+                                    </select>
+                                    @error('role')
+                                    <p class="text-danger">({{$message}})</p>
+                                    @enderror
+                                </div>
 
                                 <button type="submit" class="btn btn-primary">Добавить</button>
                             </div>
