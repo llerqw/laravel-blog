@@ -52,7 +52,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function () {
         Route::delete('/{tag}', 'DeleteController')->name('admin.tag.delete');
     });
 
-    Route::group(['namespace' => 'User', 'prefix' => 'userd'], function () {
+    Route::group(['namespace' => 'User', 'prefix' => 'user'], function () {
         Route::get('/', 'IndexController')->name('admin.user.index');
         Route::get('/create', 'CreateController')->name('admin.user.create');
         Route::post('/', 'StoreController')->name('admin.user.store');

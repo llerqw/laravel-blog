@@ -34,7 +34,23 @@
                                     <input type="text" class="form-control" name="name"
                                            placeholder="Имя пользователя">
                                     @error('name')
-                                    <p class="text-danger">Это поле необходимо заполнить!({{$message}})</p>
+                                    <p class="text-danger">{{$message}}</p>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" name="email"
+                                           placeholder="Email пользователя">
+                                    @error('email')
+                                    <p class="text-danger">{{$message}}</p>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label>Пароль</label>
+                                    <input type="password" class="form-control" name="password"
+                                           placeholder="Пароль">
+                                    @error('password')
+                                    <p class="text-danger">{{$message}}</p>
                                     @enderror
                                 </div>
 

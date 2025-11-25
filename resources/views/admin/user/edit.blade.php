@@ -25,17 +25,25 @@
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
                     <div class="col-10">
-                        <h6 class="mb-2">Редактирование пользователя "{{$user->title}}"</h6>
+                        <h6 class="mb-2">Редактирование пользователя "{{$user->name}}"</h6>
                         <form action="{{route('admin.user.update', $user->id)}}" method="post">
                             @csrf
                             @method('PATCH')
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Имя</label>
-                                    <input type="text" class="form-control" name="title"
+                                    <input type="text" class="form-control" name="name"
                                            placeholder="Название категории" value="{{$user->name}}">
                                     @error('name')
-                                    <p class="text-danger">Это поле необходимо заполнить!({{$message}})</p>
+                                    <p class="text-danger">{{$message}}</p>
+                                    @enderror
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" name="email"
+                                           placeholder="Email пользователя" value="{{$user->email}}">
+                                    @error('email')
+                                    <p class="text-danger">{{$message}}</p>
                                     @enderror
                                 </div>
 
