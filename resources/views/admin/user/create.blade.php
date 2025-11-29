@@ -45,14 +45,7 @@
                                     <p class="text-danger">{{$message}}</p>
                                     @enderror
                                 </div>
-                                <div class="form-group">
-                                    <label>Пароль</label>
-                                    <input type="password" class="form-control" name="password"
-                                           placeholder="Пароль">
-                                    @error('password')
-                                    <p class="text-danger">{{$message}}</p>
-                                    @enderror
-                                </div>
+
                                 <div class="form-group">
                                     <label for="exampleInputFile">Добавить роль</label>
                                     <select name="role" class="form-control">
