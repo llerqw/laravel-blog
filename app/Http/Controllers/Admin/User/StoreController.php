@@ -21,9 +21,7 @@ class StoreController extends Controller
         $data['password'] = Hash::make($password);
         $user = User::firstOrCreate(['email' => $data['email']], $data);
 
-        Mail::to($data['email'])->send(new PasswordMail($password));
-        // Всегда ждем 10 секунд перед отправкой письма
-        sleep(10);
+        Mail::to($data['email'])->later(now()->addSeconds(15), new PasswordMail($password));
         event(new Registered($user));
         return redirect()->route('admin.user.index');
     }
